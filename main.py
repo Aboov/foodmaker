@@ -9,20 +9,21 @@ HEADERS={
 }
 
 
-def get_random_details(response):
+def get_random_details():
     url = "https://api.spoonacular.com/recipes/random"
     params = {
         "includeNutrition": False,
         "number": 1
 
     }
-    # response=requests.get(url=url,params=params,headers=HEADERS)
-    # response=json.dumps(response.json())
+    response=requests.get(url=url,params=params,headers=HEADERS)
+    response=json.dumps(response.json())
     response = json.loads(response)
     print(response["recipes"][0]["title"])
     print(response["recipes"][0]["image"])
     print(response["recipes"][0]["sourceUrl"])
     print(f'cooking time is {response["recipes"][0]["readyInMinutes"]}')
+    return f'the name of it is {response["recipes"][0]["title"]} and the image {response["recipes"][0]["image"]} and the url {response["recipes"][0]["sourceUrl"]}'
 #get_random_details(response)
 
 response2=[{'id': 662665, 'title': 'Swiss Bircher Muesli', 'image': 'https://img.spoonacular.com/recipes/662665-312x231.jpg', 'imageType': 'jpg', 'usedIngredientCount': 2, 'missedIngredientCount': 2, 'missedIngredients': [{'id': 42184, 'amount': 0.5, 'unit': 'cup', 'unitLong': 'cups', 'unitShort': 'cup', 'aisle': 'Cereal', 'name': 'muesli', 'original': '1/2 cup muesli', 'originalName': 'muesli', 'meta': [], 'image': 'https://img.spoonacular.com/ingredients_100x100/granola.jpg'}, {'id': 1119, 'amount': 3.0, 'unit': 'tablespoons', 'unitLong': 'tablespoons', 'unitShort': 'Tbsp', 'aisle': 'Milk, Eggs, Other Dairy', 'name': 'vanilla yoghurt', 'original': '3 tablespoons of plain or vanilla yoghurt', 'originalName': 'plain or vanilla yoghurt', 'meta': ['plain'], 'extendedName': 'plain vanilla yoghurt', 'image': 'https://img.spoonacular.com/ingredients_100x100/vanilla-yogurt.png'}], 'usedIngredients': [{'id': 9003, 'amount': 1.0, 'unit': '', 'unitLong': '', 'unitShort': '', 'aisle': 'Produce', 'name': 'apple', 'original': '1 Apple', 'originalName': 'Apple', 'meta': [], 'image': 'https://img.spoonacular.com/ingredients_100x100/apple.jpg'}, {'id': 1077, 'amount': 0.5, 'unit': 'cup', 'unitLong': 'cups', 'unitShort': 'cup', 'aisle': 'Milk, Eggs, Other Dairy', 'name': 'milk', 'original': '1/2 cup of Milk', 'originalName': 'Milk', 'meta': [], 'image': 'https://img.spoonacular.com/ingredients_100x100/milk.png'}], 'unusedIngredients': [{'id': 19296, 'amount': 1.0, 'unit': 'serving', 'unitLong': 'serving', 'unitShort': 'serving', 'aisle': 'Nut butters, Jams, and Honey', 'name': 'honey', 'original': 'honey', 'originalName': 'honey', 'meta': [], 'image': 'https://img.spoonacular.com/ingredients_100x100/honey.png'}], 'likes': 1}]
@@ -72,5 +73,5 @@ def get_recipe_by_id(id):
     response = json.dumps(response.json())
     response = json.loads(response)
     print(response["sourceUrl"])
-Get_recipe_based_on_ingredents()
+
 
