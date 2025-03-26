@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5b314ce8-c136-4a06-a95b-70d725ec1049" name="Changes" comment="trying to add telegram fanctionalty">
+    <list default="true" id="5b314ce8-c136-4a06-a95b-70d725ec1049" name="Changes" comment="bot send random recipes">
+      <change afterPath="$PROJECT_DIR$/food.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/telegram_bot.py" beforeDir="false" afterPath="$PROJECT_DIR$/telegram_bot.py" afterDir="false" />
@@ -53,6 +54,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
+    "Python.randomfood.executor": "Run",
     "Python.telegram_bot.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -60,6 +62,29 @@
   }
 }]]></component>
   <component name="RunManager" selected="Python.telegram_bot">
+    <configuration name="food" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="foodmaker" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="API_KEY" value="89c63805c0cb4438b3737133aea0e680 " />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/food.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="foodmaker" />
       <option name="ENV_FILES" value="" />
@@ -89,8 +114,8 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
-        <env name="API_KEY" value="89c63805c0cb4438b3737133aea0e680" />
         <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="API_KEY" value="89c63805c0cb4438b3737133aea0e680" />
         <env name="TOKEN" value="7606644014:AAEL4qaEC9CUvHL9mMqPhRXk2Zmz2W1Uo2c" />
       </envs>
       <option name="SDK_HOME" value="" />
@@ -148,13 +173,22 @@
       <option name="project" value="LOCAL" />
       <updated>1742755991545</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="bot send random recipes">
+      <option name="closed" value="true" />
+      <created>1742758392037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1742758392037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="added fanctions for searching and getting random recipes" />
     <MESSAGE value="trying to add telegram fanctionalty" />
-    <option name="LAST_COMMIT_MESSAGE" value="trying to add telegram fanctionalty" />
+    <MESSAGE value="bot send random recipes" />
+    <option name="LAST_COMMIT_MESSAGE" value="bot send random recipes" />
   </component>
 </project>

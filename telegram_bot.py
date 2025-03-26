@@ -1,8 +1,8 @@
 from platform import processor
-from main import get_random_details
 from telegram import Update
 from telegram.ext import Application,CommandHandler,MessageHandler,filters,ContextTypes
 import os
+from food import food
 TOKEN=os.environ["TOKEN"]
 USERNAME="@Dadfoodiebot"
 #Commands
@@ -13,13 +13,15 @@ async def help_command(update:Update,context:ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("this is help")
 
 async def food_command(update:Update,context:ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(get_random_details())
+    await update.message.reply_text("please send enter the ingredients in this format ingredients:apple,banana... ")
 
 #Responses
 def handel_response(text:str):
     processed:str =text.lower()
-    if 'hello' in text:
-        return "banana"
+    if 'ingredients:' in processed:
+        processed.replace("ingredients:","").strip()
+        recipe=food()
+        return recipe.Get_recipe_based_on_ingredients(ingredients=processed)
     else:
         return "sad"
 
