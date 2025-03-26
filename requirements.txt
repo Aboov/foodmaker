@@ -1,0 +1,3 @@
+user story- I want to create a recipe from this ingrdents
+program:
+inputs via telegram and send to the api which returns the recipe
